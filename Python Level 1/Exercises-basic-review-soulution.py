@@ -24,7 +24,7 @@ print(s[1:4])
 # 'go'
 print(s[4:])
 # Bonus: Use indexing to reverse the string
-
+print(s[::-1])
 
 ###############
 ## Problem 2 ##
@@ -47,7 +47,7 @@ print(d1['simple_key'])
 d2 = {'k1':{'k2':'hello'}}
 print(d2['k1']['k2'])
 d3 = {'k1':[{'nest_key':['this is deep',['hello']]}]}
-print(d3['k1'][0]['nest_key'][1])
+print(d3['k1'][0]['nest_key'][1][0])
 
 ###############
 ## Problem 4 ##
