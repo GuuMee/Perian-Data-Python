@@ -67,5 +67,5 @@ name = "Sammy"
 
 # Use print formatting to print the following string:
 "Hello my dog's name is Sammy and he is 4 years old"
-formatted = "Hello my dog's name is {} and he is {} years old".format(name, age)
+formatted = "Hello my dog's name is {a} and he is {b} years old".format(a =name, b = age)
 print(formatted)
