@@ -1,7 +1,6 @@
 #####################################
 ### WELCOME TO YOUR OOP PROJECT #####
 #####################################
-
 # For this project you will be using OOP to create a card game. This card game will
 # be the card game "War" for two players, you an the computer. If you don't know
 # how to play "War" here are the basic rules:
@@ -11,7 +10,6 @@
 # in front of him.
 #
 # The Play:
-#
 # Each player turns up a card at the same time and the player with the higher card
 # takes both cards and puts them, face down, on the bottom of his stack.
 #
