@@ -39,9 +39,14 @@ class Card:
         self.suite = suite
         self.rank = rank
 
-     def __lt__(self, other):
-         return (index(self.rank) < index(other.rank))
+    def __str__(self):
+        return "suite={} rank={}".format(self.suite, self.rank)
 
+    def __lt__(self, other):
+        return (RANKS.index(self.rank) < RANKS.index(other.rank))
+
+    def __eq__(self, other):
+        return(self.rank == other.rank)
 
 class Deck:
     """
@@ -95,8 +100,6 @@ class Player:
     def __init__(self, name, hand): #hand object instance
         self.name = name
         self.hand = hand #one of those hand objects
-
-    def
 
     #players can play a card:
     def play_card(self):
@@ -169,9 +172,9 @@ while user.still_has_cards() and comp.still_has_cards():
     table_cards.append(p_card)
 
 # Check for War! If there's a war?
-    if c_card[1] == p_card[1]:
+    if c_card == p_card:
         # the ranking I want actually to compare, that's why [1], because playing cards are tuples
-        war_count += 1s
+        war_count += 1
         print("we have a match, time for war!")
         print("Each player removes 3 cars 'face down' and the one card face up")
         table_cards.extend(user.remove_war_cards()) #I just take top three cards available
@@ -186,7 +189,7 @@ while user.still_has_cards() and comp.still_has_cards():
         table_cards.append(p_card)
 
         #check to see who has higher rank
-        if RANKS.index(c_card[1]) < RANKS.index(p_card[1]):
+        if c_card < p_card:
             print(user.name + " has the higher card, adding to hand.")
             user.hand.add(table_cards)
         else:
@@ -195,7 +198,7 @@ while user.still_has_cards() and comp.still_has_cards():
 
     else: #no war just checking:
         #check to see who had higher rank
-        if RANKS.index(c_card[1]) < RANKS.index(p_card[1]):
+        if c_card < p_card:
             print(user.name + " has the higher card, adding to hand.")
             user.hand.add(table_cards)
         else:
