@@ -8,9 +8,9 @@ for pattern in patterns:
     print("I'm searching for:" + pattern)
 
     if re.search(pattern, text):
-        print("MATCH")
+        print("MATCHEDes")
     else:
-        print("NOT MATCH")
+        print("NOT MATCHED")
 
 print("\n")
 
