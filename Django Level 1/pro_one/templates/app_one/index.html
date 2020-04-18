@@ -1,12 +1,14 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>First App Template </title>
+    <title>Django Pinguin Page </title>
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
 </head>
 <body>
-    <h1>Hello! This is index.html</h1>
+    <h1>Hi, I'm Pinguin Peppe!</h1>
+    <img src="{% static "images/pic1.jpg" %}" alt="Pinguin">
 
-    {{insert_me}}
 </body>
 </html>
